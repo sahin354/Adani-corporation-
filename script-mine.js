@@ -20,14 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Logic for the Recharge Button ---
     if (rechargeBtn) {
         rechargeBtn.addEventListener('click', () => {
+            // This correctly takes the user to the recharge page
             window.location.href = 'recharge.html';
         });
     }
 
+    // --- Logic for the Log Out Button ---
     if (logoutBtn) {
         logoutBtn.addEventListener('click', () => {
+            // This correctly signs the user out
             firebase.auth().signOut().then(() => {
                 window.location.href = 'login.html';
             });
